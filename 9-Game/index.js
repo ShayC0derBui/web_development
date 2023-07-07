@@ -25,7 +25,7 @@ let frameTable = [
     },
     {
         name: 'run',
-        frame: 9
+        frame: 8
     },
     {
         name: 'dizzy',
