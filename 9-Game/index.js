@@ -62,7 +62,7 @@ frameTable.forEach((state, index) => {
 let frameX = 0;
 let frameY = 0;
 let gameFrame = 0;
-const staggerFrame = 2;
+const staggerFrame = 4.5;
 
 let playerState = 'idle';
 let playerStateIndex = 0;
