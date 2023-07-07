@@ -34,7 +34,7 @@ function timer() {
 let timerStatus = 'stopped'
 let timerInterval = null
 
-playPauseBtn.addEventListener('click', function(){
+playPauseBtn.addEventListener('click', function () {
     if (timerStatus == 'stopped') {
         timerInterval = window.setInterval(timer, 1000)
         document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-pause" id="pause"></i>'
@@ -43,16 +43,17 @@ playPauseBtn.addEventListener('click', function(){
     else {
         window.clearInterval(timerInterval)
         document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-play" id="play"></i>'
-        timerStatus='stopped'
+        timerStatus = 'stopped'
     }
 })
 
 resetBtn.addEventListener('click', function () {
     window.clearInterval(timerInterval)
-    timerStatus='stopped'
+    timerStatus = 'stopped'
     seconds = 0
     minutes = 0
     hours = 0
+    document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-play" id="play"></i>'
     document.getElementById('timer').innerText = '00:00:00'
 })
 
