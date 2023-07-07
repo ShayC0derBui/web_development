@@ -36,14 +36,16 @@ button{
     width: 34px; 
     color:white;
     border-radius: 5px;
-    background: linear-gradient(#0000, rgb(0 0 0/10%)) top/100% 800%;
-    transition: 0.5s;
 }
 .buttons i:hover{
-    background-position: bottom;
+    filter: brightness(120%);
+    transition: 0.1s;
+
 }
-button i:active{
-    filter: brightness(10%)
+button i:active:hover{
+    filter: brightness(70%);
+    transition: 0s;
+
 }
 #play{
     background-color: green;
