@@ -1,0 +1,19 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+.choose-state{
+    position:absolute;
+    bottom:94vh;
+    font-size: 2rem;
+    display: flex;
+}
+canvas{
+    height: 600px;
+    width: 600px;
+    border: 2px solid black;
+    background-color: rgb(241, 227, 99);
+}
