@@ -1,8 +1,20 @@
 body{
     height: 100vh;
+}
+.heading{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 20vh;
+}
+.heading>h1{
+    background-color: pink;
+    font-size: 6rem;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
 }
 .canvases{
     height:600px;

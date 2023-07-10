@@ -2,7 +2,7 @@
 let NPCs = 4;
 let gameFrame = 0;
 let numEnemies = 4;
-CANVAS_WIDTH = 300;
+CANVAS_WIDTH = 320;
 CANVAS_HEIGHT = 600;
 
 class Canvas {
@@ -137,8 +137,8 @@ class Enemy4 {
         this.newX = Math.random() * (CANVAS_WIDTH - this.width);
         this.newY = Math.random() * (CANVAS_HEIGHT - this.height);
         this.frame = 0;
-        this.interval = 150//Math.floor(Math.random() * 200 + 50); 
-        this.flapSpeedStaggerFrame = 6; //More speed - the slower it is
+        this.interval = Math.floor(Math.random() * 100 + 50); 
+        this.flapSpeedStaggerFrame = 4; //More speed - the slower it is
     }
     update() {
         let dx = this.newX - this.x;
