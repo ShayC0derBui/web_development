@@ -22,8 +22,8 @@ var collisionCanvas = document.getElementById('collisionCanvas');
 var collisionCtx = collisionCanvas.getContext('2d');
 collisionCanvas.width = window.innerWidth;
 collisionCanvas.height = window.innerHeight;
-ctx.font = '4rem impact';
-console.log(canvas.width, canvas.height);
+ctx.font = '4rem impact'; // console.log(canvas.width, canvas.height);
+
 var score = 0;
 var value = localStorage.getItem('highScore');
 
@@ -160,7 +160,7 @@ function () {
   function Particle(x, y, size) {
     _classCallCheck(this, Particle);
 
-    this.size = size / 1.5;
+    this.size = size;
     this.x = x + size * 0.5 + Math.random() * 50 - 25;
     this.y = y + size * 0.33 + Math.random() * 50 - 25;
     this.radius = Math.random() * this.size / 10;
@@ -180,9 +180,9 @@ function () {
     key: "draw",
     value: function draw() {
       ctx.save();
-      ctx.fillStyle = '#CAF381';
-      ctx.shadowColor = '#CAF381';
-      ctx.shadowBlur = 3;
+      ctx.fillStyle = '#CAF381'; // ctx.shadowColor = '#CAF381';
+      // ctx.shadowBlur = 3;
+
       ctx.globalAlpha = 1 - this.radius / this.maxRadius;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);

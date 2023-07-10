@@ -8,7 +8,7 @@ collisionCanvas.width = window.innerWidth;
 collisionCanvas.height = window.innerHeight;
 ctx.font = '4rem impact';
 
-console.log(canvas.width, canvas.height);
+// console.log(canvas.width, canvas.height);
 
 let score = 0;
 var value = localStorage.getItem('highScore');
@@ -109,7 +109,7 @@ let particles = [];
 
 class Particle {
     constructor(x, y, size) {
-        this.size = size/1.5;
+        this.size = size;
         this.x = x + size * 0.5 + Math.random() * 50 - 25;
         this.y = y + size * 0.33 + Math.random() * 50 - 25;
         this.radius = Math.random() * this.size / 10;
@@ -125,8 +125,8 @@ class Particle {
     draw() {
         ctx.save();
         ctx.fillStyle = '#CAF381';
-        ctx.shadowColor = '#CAF381';
-        ctx.shadowBlur = 3;
+        // ctx.shadowColor = '#CAF381';
+        // ctx.shadowBlur = 3;
         ctx.globalAlpha = 1 - this.radius / this.maxRadius;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
