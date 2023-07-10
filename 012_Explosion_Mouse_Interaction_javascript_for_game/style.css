@@ -1,0 +1,15 @@
+body{
+    height: 100vh;
+}
+.container{
+    height: 100vh;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container>canvas{
+    border: solid black 2px;
+    height: 600px;
+    width: 600px;
+}
