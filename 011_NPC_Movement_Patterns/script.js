@@ -177,7 +177,7 @@ for (let i = 0; i < NPCs; i++) {
         }
     }
 }
-function animate(i) {
+function animate() {
     for (let i = 0; i < NPCs; i++) {
         canvas[i].ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
         enemies[i].forEach(enemy => {
@@ -186,7 +186,7 @@ function animate(i) {
         });
     }
     gameFrame++;
-    requestAnimationFrame(() => animate(i));
+    requestAnimationFrame(animate);
 }
 animate();
 
