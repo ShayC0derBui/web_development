@@ -4,8 +4,15 @@ body{
     justify-content: center;
     align-items: center;
 }
-.canvas{
+.canvases{
     height:600px;
-    width:350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.canvases > .canvas{
+    height:600px;
+    width:320px;
+    margin:5px;
     border:solid black 3px;
 }
