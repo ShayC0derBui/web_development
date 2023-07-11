@@ -19,6 +19,7 @@ let lastTime = 0;
 let timeToNextRaven = 0;
 let ravenInterval = 800;
 let gameOver = false;
+let zenState = false;
 let zen = false;
 
 let ravens = [];
@@ -188,7 +189,7 @@ function animate(timestamp) {
             restartGame();
         });
     }
-    if (score > localStorage.getItem('highScore')) {
+    if (!zen && !zenState &&  score > localStorage.getItem('highScore')) {
         localStorage.setItem('highScore', score);
     }
 
@@ -215,6 +216,7 @@ const zenBtn = document.querySelector('#cb3');
 zenBtn.addEventListener('change', () => {
     if (zenBtn.checked) {
         zen = true;
+        zenState = true;
     }
     else {
         zen = false;

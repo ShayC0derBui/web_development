@@ -35,6 +35,7 @@ var lastTime = 0;
 var timeToNextRaven = 0;
 var ravenInterval = 800;
 var gameOver = false;
+var zenState = false;
 var zen = false;
 var ravens = [];
 
@@ -259,7 +260,7 @@ function animate(timestamp) {
     });
   }
 
-  if (score > localStorage.getItem('highScore')) {
+  if (!zen && !zenState && score > localStorage.getItem('highScore')) {
     localStorage.setItem('highScore', score);
   }
 }
@@ -280,6 +281,7 @@ var zenBtn = document.querySelector('#cb3');
 zenBtn.addEventListener('change', function () {
   if (zenBtn.checked) {
     zen = true;
+    zenState = true;
   } else {
     zen = false;
   }
